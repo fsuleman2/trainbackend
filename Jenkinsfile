@@ -34,7 +34,7 @@ pipeline {
         stage('Docker deploy'){
             steps {
               sh 'docker container rm -f revature-railways-backend'
-                sh 'docker run --name revature-railways-backend -itd -p  8080:9848 fsuleman2/revature-railways-backend'
+                sh 'docker run --name revature-railways-backend -itd -p  9090:9848 fsuleman2/revature-railways-backend'
             }
         }        
         stage('Archving') { 
